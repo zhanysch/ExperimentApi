@@ -9,5 +9,19 @@
         android:id="@+id/homeFragment"
         android:name="com.example.newschoco.ui.bottomNavigation.home.HomeFragment"
         tools:layout="@layout/fragment_home_layout"
-        android:label="HomeFragment" />
+        android:label="HomeFragment" >
+        <action
+            android:id="@+id/action_homeFragment_to_headLinesDetailsFragment"
+            app:destination="@id/headLinesDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/headLinesDetailsFragment"
+        tools:layout="@layout/fragment_headlines_details"
+        android:name="com.example.newschoco.ui.bottomNavigation.home.headlineDetails.HeadLinesDetailsFragment"
+        android:label="HeadLinesDetailsFragment">
+        <argument
+            android:name="details"
+            app:argType="com.example.newschoco.data.model.headline.Articles"
+            app:nullable="true"/>
+    </fragment>
 </navigation>
