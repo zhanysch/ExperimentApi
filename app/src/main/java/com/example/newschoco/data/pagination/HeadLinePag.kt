@@ -71,21 +71,21 @@ class HeadLinePag(
 
     private suspend fun getRemoteKeysToCurrentPosition(state: PagingState<Int, Articles>): PageKeys?{
         return state.anchorPosition?.let { position ->
-            state.closestItemToPosition(position)?.author.let { repoId ->
-                db.getPagingKeysDao().getKeyId(repoId?.toInt())
+            state.closestItemToPosition(position)?.id.let { repoId ->
+                db.getPagingKeysDao().getKeyId(repoId)
             }
         }
     }
 
     private suspend fun getRemoteKeyForFirstItem(state: PagingState<Int, Articles>): PageKeys?{
         return state.pages.firstOrNull{it.data.isNotEmpty()}?.data?.firstOrNull()?.let { repo->
-            db.getPagingKeysDao().getKeyId(repo.author?.toInt())
+            db.getPagingKeysDao().getKeyId(repo.id)
         }
     }
 
     private suspend fun getRemoteKeysForLastItem(state: PagingState<Int, Articles>): PageKeys?{
         return state.pages.lastOrNull{it.data.isNotEmpty()}?.data?.lastOrNull()?.let { repo ->
-            db.getPagingKeysDao().getKeyId(repo.author?.toInt())
+            db.getPagingKeysDao().getKeyId(repo.id)
         }
     }
 }

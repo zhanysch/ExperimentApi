@@ -16,7 +16,8 @@ class HeadlinesFragment:Fragment(R.layout.fragment_headlines) {
     private val binding by viewBinding(FragmentHeadlinesBinding::bind)
     private val vm by viewModel<HeadLineVieModel>()
 
-    private val adapter by lazy { HeadLineRecyclerAdapter() }
+    private val adapter by lazy {
+        HeadLineRecyclerAdapter() }
 
 
     @ExperimentalPagingApi

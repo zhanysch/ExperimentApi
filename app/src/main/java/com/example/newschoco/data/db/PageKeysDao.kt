@@ -9,7 +9,7 @@ import com.example.newschoco.data.model.headline.PageKeys
 @Dao
 interface PageKeysDao {
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    suspend fun insertAll(data: kotlin.collections.List<PageKeys>)
+    suspend fun insertAll(data: List<PageKeys>)
 
     @Query("SELECT * FROM pagekeys WHERE id = :id")
     suspend fun getKeyId(id: Int?): PageKeys?

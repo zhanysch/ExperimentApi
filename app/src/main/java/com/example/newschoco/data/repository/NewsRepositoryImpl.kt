@@ -17,7 +17,8 @@ class NewsRepositoryImpl(private val network: NewsService,private val db : AppDa
 
     @ExperimentalPagingApi
     override fun getPagingResult(): LiveData<PagingData<Articles>> {
-       val pagingSourceFactory = {db.getContentDao().getAll()}
+       val pagingSourceFactory = {db.getContentDao()
+           .getAll()}
         return Pager(
             config = PagingConfig(pageSize = PAGE_SIZE,enablePlaceholders = false),
             remoteMediator = HeadLinePag(network,db),
@@ -26,6 +27,6 @@ class NewsRepositoryImpl(private val network: NewsService,private val db : AppDa
     }
 
     companion object{
-        const val  PAGE_SIZE = 90
+        const val  PAGE_SIZE = 3
     }
 }
