@@ -1,7 +1,7 @@
 package com.example.newschoco.utils
 
 /*
- * Copyright 2019, The Android Open com.example.newschoco.data.model.everything.com.example.newschoco.data.model.headline.Source Project
+ * Copyright 2019, The Android Open com.example.newschoco.data.model.everything.com.example.newschoco.data.model.headline.com.example.newschoco.data.model.everything.Source Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.

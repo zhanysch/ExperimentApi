@@ -3,15 +3,20 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/gen/app/src/main/res/drawable/bg_btn_favorite.xml" value="0.14351851851851852" />
         <entry key="..\:/gen/app/src/main/res/drawable/ic_baseline_home_24.xml" value="0.13703703703703704" />
         <entry key="..\:/gen/app/src/main/res/drawable/ic_baseline_star_outline_24.xml" value="0.13703703703703704" />
+        <entry key="..\:/gen/app/src/main/res/drawable/ic_hearth_orange_filled.xml" value="0.14351851851851852" />
         <entry key="..\:/gen/app/src/main/res/layout/activity_main.xml" value="0.18" />
-        <entry key="..\:/gen/app/src/main/res/layout/fragment_all.xml" value="0.1" />
+        <entry key="..\:/gen/app/src/main/res/layout/fragment_all.xml" value="0.22" />
+        <entry key="..\:/gen/app/src/main/res/layout/fragment_everything_details.xml" value="0.151268115942029" />
         <entry key="..\:/gen/app/src/main/res/layout/fragment_features_layout.xml" value="0.1" />
         <entry key="..\:/gen/app/src/main/res/layout/fragment_headlines.xml" value="0.1" />
         <entry key="..\:/gen/app/src/main/res/layout/fragment_headlines_details.xml" value="0.21" />
         <entry key="..\:/gen/app/src/main/res/layout/fragment_home_layout.xml" value="0.15" />
+        <entry key="..\:/gen/app/src/main/res/layout/item_recycler_everyting.xml" value="0.15081521739130435" />
         <entry key="..\:/gen/app/src/main/res/layout/item_recycler_headline.xml" value="0.1" />
+        <entry key="..\:/gen/app/src/main/res/layout/item_recycler_headline_feature.xml" value="0.14356884057971014" />
         <entry key="..\:/gen/app/src/main/res/menu/menu_bottom.xml" value="0.2" />
       </map>
     </option>

@@ -15,7 +15,7 @@ abstract class AppDataBase: RoomDatabase() {
     companion object{
         fun getInstanceDB(context:Context): AppDataBase{
             return Room.databaseBuilder(context, AppDataBase::class.java,"myDB")
-                .fallbackToDestructiveMigration()
+                .allowMainThreadQueries()
                 .build()
         }
     }

@@ -13,6 +13,9 @@
         <action
             android:id="@+id/action_homeFragment_to_headLinesDetailsFragment"
             app:destination="@id/headLinesDetailsFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_everythingDetailsFragment"
+            app:destination="@id/everythingDetailsFragment" />
     </fragment>
     <fragment
         android:id="@+id/headLinesDetailsFragment"
@@ -22,6 +25,16 @@
         <argument
             android:name="details"
             app:argType="com.example.newschoco.data.model.headline.Articles"
+            app:nullable="true"/>
+    </fragment>
+    <fragment
+        android:id="@+id/everythingDetailsFragment"
+        tools:layout="@layout/fragment_everything_details"
+        android:name="com.example.newschoco.ui.bottomNavigation.home.everythingDetails.EverythingDetailsFragment"
+        android:label="EverythingDetailsFragment">
+        <argument
+            android:name="details"
+            app:argType="com.example.newschoco.data.model.everything.EverythingArticles"
             app:nullable="true"/>
     </fragment>
 </navigation>

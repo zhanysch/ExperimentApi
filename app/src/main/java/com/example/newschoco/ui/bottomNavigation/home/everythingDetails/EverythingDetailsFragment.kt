@@ -1,4 +1,4 @@
-package com.example.newschoco.ui.bottomNavigation.home.headlineDetails
+package com.example.newschoco.ui.bottomNavigation.home.everythingDetails
 
 import android.os.Bundle
 import android.view.View
@@ -6,18 +6,14 @@ import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import com.example.newschoco.R
-import com.example.newschoco.databinding.FragmentHeadlinesDetailsBinding
+import com.example.newschoco.databinding.FragmentEverythingDetailsBinding
 import com.example.newschoco.utils.viewBinding
 import com.squareup.picasso.Picasso
-import org.koin.androidx.viewmodel.ext.android.viewModel
 
-class HeadLinesDetailsFragment : Fragment(R.layout.fragment_headlines_details) {
+class EverythingDetailsFragment():Fragment(R.layout.fragment_everything_details) {
 
-    private val binding by viewBinding(FragmentHeadlinesDetailsBinding::bind)
-
-    private val vm by viewModel<HeadLineDetailsViewModel>()
-
-    private val args : HeadLinesDetailsFragmentArgs by navArgs()
+    private val binding by viewBinding(FragmentEverythingDetailsBinding::bind)
+    private val args : EverythingDetailsFragmentArgs by navArgs()
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -39,9 +35,5 @@ class HeadLinesDetailsFragment : Fragment(R.layout.fragment_headlines_details) {
             findNavController().popBackStack()
         }
 
-        binding.checkNews.setOnCheckedChangeListener{ buttonView, isCheked ->
-            args.details?.isChecked = isCheked
-            args.details?.let { vm.update(it) }
-        }
     }
 }

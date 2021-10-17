@@ -1,10 +1,8 @@
 package com.example.newschoco.data.db
 
+import androidx.lifecycle.LiveData
 import androidx.paging.PagingSource
-import androidx.room.Dao
-import androidx.room.Insert
-import androidx.room.OnConflictStrategy
-import androidx.room.Query
+import androidx.room.*
 import com.example.newschoco.data.model.headline.Articles
 
 @Dao
@@ -16,6 +14,12 @@ interface NewsDao {
     @Query("SELECT * FROM Articles")
     fun getAll(): PagingSource<Int, Articles>
 
+    @Update
+    fun updateDetailArticles(item : Articles)
+
     @Query("DELETE FROM Articles")
     suspend fun deleteAll()
+
+    @Query("SELECT ALL * FROM ARTICLES WHERE isChecked")
+    fun getAllHeadLineNews(): LiveData<List<Articles>>
 }
